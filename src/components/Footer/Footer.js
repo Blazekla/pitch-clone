@@ -37,8 +37,8 @@ function Footer() {
   const classes = useStyles();
   return (
     <div>
-    <Container fixed>
-      <Typography component="div">
+    <Container maxWidth="md">
+      <Typography component="div" noWrap>
         <Grid container spacing={3} justify="center">
 
 
@@ -62,14 +62,16 @@ function Footer() {
           </Grid>
 
           {/* Major column */}
-          <Grid item xs={12} md={6} className={classes.major}>
-            <Grid
-              container
-              justify="space-between"
+          <Grid item xs={12} md={8} className={classes.major}>
+            <Box
+
+              display="flex"
+              justifyContent="space-around"
+              flexWrap="wrap"
               >
 
               {/* Company Column */}
-              <Grid item xs={4}>
+              <Box flexBasis='5.6375rem'>
                 <Box display="flex" flexDirection="column">
                   <Box p={1} fontWeight="fontWeightBold">
                     Company
@@ -90,10 +92,10 @@ function Footer() {
                     Press Room
                   </Box>
                 </Box>
-              </Grid>
+              </Box>
 
               {/* Legal column */}
-              <Grid item xs={4}>
+              <Box flexBasis='6.69625rem'>
                 <Box display="flex" flexDirection="column">
                   <Box p={1} fontWeight="fontWeightBold">
                     Legal
@@ -114,16 +116,15 @@ function Footer() {
                     ERDF Support
                   </Box>
                 </Box>
-              </Grid>
+              </Box>
 
               {/* Follow Us Column */}
-              <Grid item xs={4}>
-                <Box display="flex" flexDirection="column">
+              <Box flexBasis='14.284375rem'>
+                <Box display="flex" flexDirection="column" alignItems= 'stretch'>
                   <Box p={1} fontWeight="fontWeightBold">
                     Follow us
                   </Box>
                   <Box p={1} display="flex" flexDirection="row" className={classes.svg}>
-
                     {/* Twitter SVG */}
                     <Box p={1}>
                       <svg className='svgicons' fill="none" height="22" viewBox="0 0 25 22" width="25" xmlns="http://www.w3.org/2000/svg"><path d="m24.0032.0135613c-1.0448.8281127-2.2017 1.4614787-3.4259 1.8757187-1.346-1.738975-3.515-2.348805-5.4312-1.526994-1.9162.821814-3.172 2.900444-3.1445 5.204884v1.22596c-3.89435.11347-7.58062-1.97138-9.81949-5.55361 0 0-4.36422 11.03368 5.45526 15.93748-2.24699 1.7139-4.92375 2.5732-7.63737 2.452 9.81948 6.1298 21.8211 0 21.8211-14.09861-.001-.34149-.0303-.68214-.0873-1.01755 1.1135-1.23394 1.8993-2.79187 2.2694-4.4992787z" fill="#424648"/></svg>
@@ -142,18 +143,18 @@ function Footer() {
                     <Box p={1}>
                       <svg className='svgicons' fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="m23.9 7.10059c-.1-1.29981-.3-2.09961-.6-2.89942-.1048-.41894-.2647-.81152-.4938-1.19043-.2081-.34375-.4732-.67676-.8062-1.00976-.7-.7002-1.3-1.099613-2.1-1.400394-.8-.299805-1.6-.5-2.9-.59960944h-5c-3.30005 0-3.69995 0-4.90002.09960944-1.29993 0-2.19996.200195-3 .5-.69996.300781-1.40003.700194-2.09998 1.400394-.37158.37207-.65869.71484-.89111 1.07519-.205448.31836-.368167.64942-.508914 1.02442-.299927.7998-.5000004 1.70019-.5000004 3-.0181885.21875-.0330811.41113-.0452881.59961-.0235596.3623-.0369873.70996-.0445557 1.20312-.0101318.65234-.0101318 1.56058-.0101318 3.09768 0 3.2998 0 3.6992.0999756 4.8994.0999754 1.2998.3000484 2.1006.5999754 2.9004.200073.7998.600099 1.5 1.300049 2.2002.69995.6992 1.30005 1.0996 2.09998 1.3994.80004.2998 1.59997.5 2.90002.6006h5c1.6152 0 2.5356 0 3.1952-.0117.688-.0118 1.0922-.0372 1.7048-.0889.7245-.0557 1.2937-.1426 1.7942-.2598.3976-.0937.7517-.207 1.1058-.3398.1005-.0371.1994-.0772.2967-.1182.0826-.0351.1642-.0713.2446-.1094.5785-.2744 1.0982-.6357 1.5587-1.1728.7-.7002 1.1-1.2998 1.4-2.0996s.5-1.6006.6-2.9004c.1-1.2002.1-1.5996.1-4.8994 0-3.29983 0-3.70022-.1-4.90041zm-16.1002 4.89841c0 2.2959 1.90455 4.2002 4.2001 4.2002 2.2954 0 4.1999-1.9043 4.1999-4.2002 0-2.2949-1.9045-4.20017-4.1999-4.20017-2.29555 0-4.2001 1.90527-4.2001 4.20017zm-2 0c0 3.4004 2.80005 6.2012 6.2001 6.2012 3.3999 0 6.1999-2.8008 6.1999-6.2012 0-3.40037-2.8-6.20017-6.1999-6.20017-3.40005 0-6.2001 2.7998-6.2001 6.20017zm11.2002-6.39939c0 .80078.6 1.40137 1.4 1.40137.8001 0 1.4-.60059 1.4-1.40137 0-.79981-.5999-1.40039-1.4-1.40039-.8 0-1.4.60058-1.4 1.40039z" fill="#424648" fill-rule="evenodd"/></svg>
                     </Box>
-
                   </Box>
-                  <Box>
+
+                  <Box textAlign="left">
                     Download a 🐶 Coloring Page
                   </Box>
-                  <Box>
+                  <Box textAlign="left">
                     Download the PITCHSVGICON Game
                   </Box>
                 </Box>
-              </Grid>
+              </Box>
 
-            </Grid>
+            </Box>
           </Grid>
         </Grid>
       </Typography>
