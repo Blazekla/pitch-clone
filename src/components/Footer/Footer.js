@@ -146,7 +146,7 @@ function Footer() {
                   </Box>
 
                   <Box textAlign="left">
-                    Download a 🐶 Coloring Page
+                    Download a <span role="img" aria-label='Dog Face'>🐶</span> Coloring Page
                   </Box>
                   <Box textAlign="left">
                     Download the PITCHSVGICON Game
