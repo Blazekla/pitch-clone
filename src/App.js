@@ -1,18 +1,22 @@
 import React from "react";
-import Footer from "./components/Footer/Footer.js";
-import Header from "./components/header/Header.js";
-import SignUp from "./components/Main/SignUp";
 import { ThemeProvider } from "styled-components";
 import { createMuiTheme } from "@material-ui/core/styles";
+import CssBaseline from "@material-ui/core/CssBaseline";
 
-const theme = createMuiTheme();
+import Home from "../src/components/pages/Home";
+import About from "../src/components/pages/About";
+import Blog from "../src/components/pages/Blog";
+
+const theme = createMuiTheme(); //Used to control global theme values
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Header />
-      <SignUp />
-      <Footer />
+      <CssBaseline />
+      {/* Need React Router to switch between pages below */}
+      <Home />
+      <About />
+      <Blog />
     </ThemeProvider>
   );
 }
