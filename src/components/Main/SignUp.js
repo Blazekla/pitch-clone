@@ -57,7 +57,7 @@ const textStyles = makeStyles(
       },
     },
     notchedOutline: {
-      borderColor: "brown",
+      borderColor: "white",
       "&:hover": {
         borderColor: "red",
       },
