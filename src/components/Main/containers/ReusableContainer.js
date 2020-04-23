@@ -1,9 +1,11 @@
 import React from "react";
+import PropTypes from "prop-types";
 import StyledGrid from "./StyledGrid";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import CardMedia from "@material-ui/core/CardMedia";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 const useStyles = makeStyles((theme) => ({
   video: {
@@ -13,13 +15,20 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "10rem",
     paddingBottom: "10rem",
   },
+  media: {},
 }));
 
 function Container(props) {
   const classes = useStyles();
-  const found = props.mediaFirst ? -1 : 0;
+
+  //use theme and mediaquery to arrange order of media and text depending on screen size
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("md"));
+  const found = props.mediaFirst && matches ? -1 : 0;
+
   return (
     <StyledGrid container>
+      {console.log(`Below 600px?: ${matches}`)}
       <Grid
         container
         direction="row"
@@ -42,7 +51,7 @@ function Container(props) {
         </Grid>
         <Grid item style={{ order: found }} md={6} className={classes.video}>
           <CardMedia
-            // className={classes.cover}
+            // className={classes.media}
             component="video"
             src={props.media}
             autoPlay
@@ -56,5 +65,10 @@ function Container(props) {
 }
 
 //Add proptypes to control props used by component
-
+Container.propTypes = {
+  title: PropTypes.string.isRequired,
+  mediaFirst: PropTypes.bool,
+  paragraph: PropTypes.string.isRequired,
+  media: PropTypes.string,
+};
 export default Container;
