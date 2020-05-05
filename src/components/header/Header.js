@@ -1,4 +1,5 @@
 import React from "react";
+import './Header.css';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -11,6 +12,7 @@ import Grid from '@material-ui/core/Grid';
 import Badge from '@material-ui/core/Badge';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
+import Hamburgers from './hamburgers/Hamburgers.js';
 
 
 const useStyles = makeStyles(theme => ({
@@ -42,7 +44,6 @@ const useStyles = makeStyles(theme => ({
 function Header() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
-
   const handleClick = event => {
     setAnchorEl(event.currentTarget);
   };
@@ -50,6 +51,7 @@ function Header() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
   return (
     <AppBar position="static" color="transparent">
       <Toolbar>
@@ -121,6 +123,7 @@ function Header() {
                 </Typography>
               </MenuItem>
             </Menu>
+            <Hamburgers />
           </div>
 
         </Grid>
