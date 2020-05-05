@@ -44,12 +44,15 @@ const useStyles = makeStyles(theme => ({
 function Header() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [burgerState, setBurgerState] = React.useState(false);
   const handleClick = event => {
     setAnchorEl(event.currentTarget);
+    setBurgerState(!burgerState);
   };
 
   const handleClose = () => {
     setAnchorEl(null);
+    setBurgerState(!burgerState);
   };
 
   return (
@@ -123,7 +126,7 @@ function Header() {
                 </Typography>
               </MenuItem>
             </Menu>
-            <Hamburgers />
+            <Hamburgers function={handleClick} buttonState={burgerState}/>
           </div>
 
         </Grid>
