@@ -1,10 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import Burger from 'react-css-burger';
 
-
 function Hamburgers(props) {
-
-
 
   return (
     <Burger

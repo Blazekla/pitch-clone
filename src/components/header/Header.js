@@ -20,9 +20,6 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexgrow: 1,
   },
-  typo: {
-    paddingLeft: theme.spacing(6),
-  },
   barBox: {
     [theme.breakpoints.down(832)]: {
       display: 'none',
@@ -33,8 +30,17 @@ const useStyles = makeStyles(theme => ({
       display: 'none',
     },
   },
-  button: {
-    paddingRight: theme.spacing(1),
+
+  active:{
+    marginLeft: theme.spacing(6),
+    color: '#334ac0',
+    boxShadow: '0 2px 0 #334ac0',
+  },
+  inactive:{
+    marginLeft: theme.spacing(6),
+    '&:hover': {
+    boxShadow: '0 2px 0 #dddfe5',
+    },
   },
   title: {
     flexGrow: 1,
@@ -68,25 +74,25 @@ function Header() {
           <svg fill="none" height="23" width="66"><path d="M44.87 17.272a4.318 4.318 0 11.04-4.877l3.191-1.884a8.019 8.019 0 10-.017 8.613l-3.213-1.852zM53.662 0H49.96v22.206h3.7v-7.402a4.318 4.318 0 118.636 0v7.402h3.701v-8.122a7.3 7.3 0 00-12.336-5.282V0zM27.756 0h-3.701v17.271a5.551 5.551 0 009.201 4.183l-1.788-3.034a1.847 1.847 0 01-1.45.701h-.412a1.851 1.851 0 01-1.85-1.85v-6.168h3.7V7.402h-3.7V0zM19.74 0a2.056 2.056 0 100 4.112 2.056 2.056 0 000-4.112zM21.59 22.206V7.402h-3.7v14.804h3.7z" fill="currentColor"></path><path clip-rule="evenodd" d="M0 22.206h3.7v-4.318h3.393A8.944 8.944 0 107.093 0H0v22.206zM3.7 3.7h3.393a5.243 5.243 0 010 10.486H3.701V3.7z" fill-rule="evenodd" fill="currentColor"></path></svg>
 
           <Box display="flex" className={classes.barBox}>
-            <Typography variant="h6" className={classes.home}>
+            <Typography variant="h6" className={classes.active}>
               Home
             </Typography>
-            <Typography variant="h6" className={classes.typo}>
+            <Typography variant="h6" className={classes.inactive}>
               About
             </Typography>
-            <Typography variant="h6" className={classes.typo}>
+            <Typography variant="h6" className={classes.inactive}>
               Blog
             </Typography>
             <Box>
               <Badge badgeContent={8} color="primary" >
-                <Typography variant="h6" className={classes.typo}>
+                <Typography variant="h6" className={classes.inactive}>
                   Job
                 </Typography>
               </Badge>
             </Box>
           </Box>
 
-          <div>
+          <Box display="flex" alignItems="center">
             <Button
               variant="outlined"
               color="primary"
@@ -99,6 +105,9 @@ function Header() {
             <IconButton aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick} className={classes.menu}>
               <MenuRoundedIcon />
             </IconButton>
+            <Box>
+              <Hamburgers function={handleClick} buttonState={burgerState} className={classes.menu}/>
+            </Box>
             <Menu
               id="simple-menu"
               anchorEl={anchorEl}
@@ -127,8 +136,7 @@ function Header() {
                 </Typography>
               </MenuItem>
             </Menu>
-            <Hamburgers function={handleClick} buttonState={burgerState}/>
-          </div>
+          </Box>
 
         </Grid>
       </Toolbar>
