@@ -7,15 +7,15 @@ import CardMedia from "@material-ui/core/CardMedia";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   video: {
-    maxWidth: "30rem",
+    maxWidth: "30rem"
   },
   textSection: {
     paddingTop: "10rem",
-    paddingBottom: "10rem",
+    paddingBottom: "10rem"
   },
-  media: {},
+  media: {}
 }));
 
 function Container(props) {
@@ -28,7 +28,6 @@ function Container(props) {
 
   return (
     <StyledGrid container>
-      {console.log(`Below 600px?: ${matches}`)}
       <Grid
         container
         direction="row"
@@ -51,7 +50,7 @@ function Container(props) {
         </Grid>
         <Grid item style={{ order: found }} md={6} className={classes.video}>
           <CardMedia
-            // className={classes.media}
+            className={classes.media}
             component="video"
             src={props.media}
             autoPlay
@@ -69,6 +68,6 @@ Container.propTypes = {
   title: PropTypes.string.isRequired,
   mediaFirst: PropTypes.bool,
   paragraph: PropTypes.string.isRequired,
-  media: PropTypes.string,
+  media: PropTypes.string
 };
 export default Container;

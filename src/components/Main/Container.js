@@ -30,7 +30,6 @@ function Container() {
         title="Connected to what matters"
         paragraph="Knowledge isn’t static — why should your presentations be? We integrate with the tools you rely on every day to keep information and conversations up-to-date, turning presentations into living documents."
       />
-      <ReusableContainer />
     </React.Fragment>
   );
 }
