@@ -10,7 +10,6 @@ function Container() {
     <React.Fragment>
       <ReusableContainer
         media={Collaboration}
-        // mediaFirst
         title="Workflow that just works"
         paragraph="Collaboration should be simple, straightforward, and effective.
       With Pitch, it is. Discuss current activities, manage tasks, and
@@ -28,7 +27,6 @@ function Container() {
 
       <ReusableContainer
         media={Integration}
-        // mediaFirst
         title="Connected to what matters"
         paragraph="Knowledge isn’t static — why should your presentations be? We integrate with the tools you rely on every day to keep information and conversations up-to-date, turning presentations into living documents."
       />
