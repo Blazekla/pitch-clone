@@ -64,7 +64,7 @@ function Header() {
   };
 
   return (
-    <AppBar position="static" color="transparent">
+    <AppBar position="sticky" color="transparent">
       <Toolbar>
         <Grid
           container
