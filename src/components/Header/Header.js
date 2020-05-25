@@ -14,6 +14,7 @@ import Badge from '@material-ui/core/Badge';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Hamburgers from './hamburgers/Hamburgers.js';
+import { Link } from "react-router-dom";
 
 
 const useStyles = makeStyles(theme => ({
@@ -75,13 +76,19 @@ function Header() {
 
           <Box display="flex" className={classes.barBox}>
             <Typography variant="h6" className={classes.active}>
-              Home
+              <Link to="/">
+                Home
+              </Link>
             </Typography>
             <Typography variant="h6" className={classes.inactive}>
-              About
+              <Link to="/about">
+                About
+              </Link>
             </Typography>
             <Typography variant="h6" className={classes.inactive}>
-              Blog
+              <Link to="/blog">
+                Blog
+              </Link>
             </Typography>
             <Box>
               <Badge badgeContent={8} color="primary" >
