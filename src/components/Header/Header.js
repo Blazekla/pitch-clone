@@ -53,7 +53,7 @@ function Header() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [burgerState, setBurgerState] = React.useState(false);
-  const [activeButton, setActiveButton] = React.useState('About');
+  const [activeButton, setActiveButton] = React.useState('Home');
   const handleClick = event => {
     setAnchorEl(event.currentTarget);
     setBurgerState(!burgerState);
