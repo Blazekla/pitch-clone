@@ -2,3 +2,10 @@ a:-webkit-any-link {
   color: inherit;
   text-decoration: none;
 }
+
+
+@media only screen and (min-width: 832px) {
+.burger-button {
+    display:none;
+  }
+}
