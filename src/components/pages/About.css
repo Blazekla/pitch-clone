@@ -1,0 +1,24 @@
+.parallax {
+  background: #4966f7 linear-gradient(95.24deg,#4966f7 0,#8253ff 122.55%);
+  height: 50vh;
+
+}
+
+.parallax-paragraph {
+  color: #fff;
+  margin: 0 0;
+}
+
+.parallax-pic {
+  color: #fff;
+  background-image: url('./../../media/aboutGirlPicture.png');
+  height: 100%;
+  widith: auto;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}

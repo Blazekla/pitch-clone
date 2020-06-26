@@ -1,8 +1,19 @@
 import React from "react";
-import Layout from "./Layout";
 
 function Blog() {
-  return <Layout></Layout>;
+  return (
+    <div>
+      <div>This is the blog page</div>
+      <div>This is the blog page</div>
+      <div>This is the blog page</div>
+      <div>This is the blog page</div>
+      <div>This is the blog page</div>
+      <div>This is the blog page</div>
+      <div>This is the blog page</div>
+      <div>This is the blog page</div>
+      <div>This is the blog page</div>
+    </div>
+  )
 }
 
 export default Blog;
